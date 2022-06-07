@@ -1,0 +1,15 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    
+}
+
+.left{
+    background-image: url("src/img.jpg");
+    display: flex;
+    flex-direction: column;    
+}
