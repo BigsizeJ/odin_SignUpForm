@@ -1,15 +1,125 @@
+@font-face {
+    font-family: Mukta;
+    src: url("src/Mukta.ttf");
+}
+
+@font-face {
+    font-family: Norse;
+    src: url("src/Norse-Bold.otf");
+}
 body{
     padding: 0;
     margin: 0;
+    font-size: 0.7rem;
+    font-family: Mukta, sans-serif;
 }
 
 .container{
     display: flex;
-    
+    height: 100vh;
+    width: 100vw;
+
 }
 
 .left{
-    background-image: url("src/img.jpg");
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
+    width: 40vw;
+    height: 100vh;
+    background-image: url('src/img.jpg');
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+}
+
+.logo{
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.logo img{
+    width: 15%;
+}
+
+.logo label{
+    font-size: 5rem;
+    font-family: Norse, Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 15px 20px 15px;
+    background-color: #1c1c1f;
+    width: 60vw;
+    color: white;
+}
+
+
+.input-container{
+    display: flex;
+    gap: 20px;
+    background-color: #1e2020;
+    box-shadow: 0px 3px 9px black;
+    padding: 15px;
+}
+
+.left-input, .right-input{
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+
+label{
+    font-size: .9rem;
+}
+
+.left-input > input, .right-input > input{
+    padding: 5px;
+    width: 250px;
+    font-size: 1rem;
+}
+
+.btn{
+    padding: 10px 70px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, .3);
+    color: white;
+}
+
+
+.login{
+    margin-left: 15px;
+    font-size: 1rem;
+}
+
+.login a{
+    text-decoration: none;
+    color: gray;
+}
+
+.login a:link, .login a:visited{
+    text-decoration: none;
+    color: gray;
+}
+
+.login a:hover{
+    transition: .5ms linear;
+    text-decoration: underline;
+    color: #b1abc0;
 }
