@@ -16,13 +16,12 @@
 
 *{
     font-family: Mukta, sans-serif;
+    color: var(--textDefault-color);
 }
 
 body{
     margin: 0;
     padding: 0;
-    
-   
     font-size: 1rem;
 }
 
@@ -72,27 +71,60 @@ body{
     color: var(--textDefault-color)
 }
 
-
 .input-container{
     display: flex;
+    flex-direction: column;
     background-color: var(--secondary-color);
     box-shadow: 0px 5px 20px black;
     padding: 20px 0px 20px 10px;
-    gap: 50px;
+    gap: 10px;
 }
 
-.left-input > label, .right-input > label{
+.input-container label{
     display: flex;
     flex-direction: column;
 }
 
-.left-input, .right-input{
+.row{
     display: flex;
-    flex-direction: column;
     gap: 20px;
 }
 
+.row input{
+    background-color: #fefefe;
+    color: black;
+}
 
+.btn{
+    margin-top: 20px;
+    min-width: 150px;
+    padding: 12px;
+    border: none;
+    font-weight: 700;
+    background-color: #fefefe;
+    color: black;
+    border-radius: 5px;
+}
+
+.btn:hover{
+    cursor: pointer;
+    color: var(--textDefault-color);
+    background-color: rgba(255, 255, 255, .2);
+}
+
+.login a{
+    text-decoration: none;
+    color: gray;
+}
+
+.login a:link, .login a:visited{
+    color: gray;
+    text-decoration: none;
+}
+.login a:hover{
+    text-decoration: underline;
+    color: rgba(255, 255, 255, .7);
+}
 
 
 @media screen and (max-width: 850px){
@@ -101,7 +133,7 @@ body{
     }
 
     .left{
-        width: 100vw;
+        width: 100%;
         background-position: center;
     }
 
@@ -113,18 +145,23 @@ body{
         font-size: 5rem;
     }
 
-    .right{
-        width: 100vw;
-    }
-
     .input-container{
         flex-direction: column;
         gap: 20px;
         text-align: center;
     }
 
-    .left-input input, .right-input input{
-        margin: auto;
-        width: 50vw;
+    .row{
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .row input{
+        width: 70vw;
+        padding: 5px;
+    }
+
+    .bottom{
+        text-align: center;
     }
 }
